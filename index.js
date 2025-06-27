@@ -102,5 +102,21 @@ for (const file of eventFiles) {
   }
 })();
 
+// For Railway deployment - add health check endpoint
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Discord bot is running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Health check server running on port ${PORT}`);
+});
+
+// Keep the login part as it was
+client.login(process.env.DISCORD_TOKEN);
+
 // Login to Discord
 client.login(process.env.DISCORD_TOKEN);
