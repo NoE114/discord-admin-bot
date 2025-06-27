@@ -1,0 +1,10 @@
+{
+  "clientId": "YOUR_CLIENT_ID",
+  "prefix": "!",
+  "activity": "Managing Servers",
+  "status": "online",
+  "embedColor": "#5865F2",
+  "footerText": "Discord Admin Bot",
+  "defaultCooldown": 3,
+  "adminRoleName": "Bot Admin"
+}
