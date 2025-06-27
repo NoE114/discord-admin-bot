@@ -4,6 +4,19 @@ const path = require('path');
 const { Client, Collection, GatewayIntentBits, Partials, REST, Routes } = require('discord.js');
 const config = require('./config.json');
 
+// For Railway deployment
+const PORT = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Discord bot is running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
 // Create a new client instance
 const client = new Client({
   intents: [
